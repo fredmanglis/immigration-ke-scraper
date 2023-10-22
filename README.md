@@ -42,6 +42,15 @@ pip install -r requirements.txt
 
 ## Usage
 
+Initialise the database with
+
+```sh
+sqlite3 --init scripts/schema-sqlite.sql -cmd "PRAGMA foreign_keys = ON;" -header /path/to/database.db
+```
+
+replacing `/path/to/database.db` with the path where you want your sqlite3
+database to be.
+
 ```sh
 python3 -m scripts.parse_and_output /path/to/downloaded/image.png
 ```
